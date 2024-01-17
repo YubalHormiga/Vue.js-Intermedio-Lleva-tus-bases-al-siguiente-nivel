@@ -18,6 +18,9 @@ const routeLinks: RouterLink[] =
   <div>
     <NavBar :links="routeLinks" is-secondary />
     <h4>Pokemon Layout</h4>
-    <RouterView />
+    <!-- <Suspense> -->
+      <RouterView />
+      <!-- <template #fallback> Loading... </template> -->
+    <!-- </Suspense> -->
   </div>
 </template>
