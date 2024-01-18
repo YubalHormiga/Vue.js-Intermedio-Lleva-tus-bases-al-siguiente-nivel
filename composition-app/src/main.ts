@@ -4,22 +4,23 @@ import { VueQueryPlugin } from "@tanstack/vue-query";
 import App from './App.vue'
 import router from './router'
 
-import './assets/main.css';
 
+import './assets/main.css';
+import './store/store';
 
 const app = createApp(App)
 
 app.use(VueQueryPlugin);
 // VueQueryPlugin.install(app, {
-//   queryClientConfig: {
-//     defaultOptions: {
-//       queries: {
-//         cacheTime: 1000 * 120,
-//         refetchOnReconnect: 'always',
+//     queryClientConfig: {
+//       defaultOptions: {
+//         queries: {
+//           cacheTime: 1000 * 120, // 2 minutes
+//           refetchOnReconnect: 'always',
+//         }
 //       }
 //     }
-//   }
-// });
+//   });
 
 app.use(router);
 
