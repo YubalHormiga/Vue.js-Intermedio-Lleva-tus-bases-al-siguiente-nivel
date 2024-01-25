@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "backend-server": "json-server --watch ./db/db.json --port 3001",
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
@@ -12,6 +13,8 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@tanstack/vue-query": "^5.17.19",
+    "axios": "^1.6.5",
     "pinia": "^2.1.7",
     "vue": "^3.3.11",
     "vue-router": "^4.2.5"
